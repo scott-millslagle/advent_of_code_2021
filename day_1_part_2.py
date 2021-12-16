@@ -1,4 +1,4 @@
-def check_depth(depth_data):
+def check_three_measurement_sliding(depth_data):
     """
     Day 1, Part 2: Sonar Sweep, Advent of Code, 2021.
     https://adventofcode.com/2021/day/1
