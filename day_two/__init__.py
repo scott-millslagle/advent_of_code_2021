@@ -1,0 +1,1 @@
+from day_2_part_2 import final_location
