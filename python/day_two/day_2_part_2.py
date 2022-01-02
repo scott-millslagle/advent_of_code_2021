@@ -15,19 +15,21 @@ def final_location(commands):
     file = open(commands, "r")
 
     for command in file.readlines():
-        print(command)
-    #     print(final_destination)
-    #     command = command.strip()
-    #     direction, units = command.split()
-    #     units = int(units)
-    #
-    #     if direction == "up":
-    #         final_destination["aim"] -= units
-    #         # final_destination["vertical"] -= units
-    #     elif direction == "down":
-    #         final_destination["aim"] += units
-    #         # final_destination["vertical"] += units
-    #     elif direction == "forward":
-    #         final_destination["horizontal"] += units
-    #         final_destination["vertical"] += final_destination["aim"] * units
-    # return final_destination["horizontal"] * final_destination["vertical"]
+        command = command.strip()
+
+        direction, units = command.split()
+        units = int(units)
+
+        if direction == "up":
+            final_destination["aim"] -= units
+        elif direction == "down":
+            final_destination["aim"] += units
+        elif direction == "forward":
+            final_destination["horizontal"] += units
+            final_destination["vertical"] += final_destination["aim"] * units
+    return final_destination["horizontal"] * final_destination["vertical"]
+
+
+
+
+print(final_location("day_2_input.txt"))
